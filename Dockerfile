@@ -78,15 +78,15 @@ RUN sed -i '/^export HADOOP_CONF_DIR/ s:.*:export HADOOP_CONF_DIR=/usr/local/had
 
 # PSEUDO DISTRIBUTED MODE CONF
 # # pseudo distributed
-ADD config/core-site.xml $HADOOP_PREFIX/etc/hadoop/core-site.xml
-ADD config/hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
-ADD config/slaves $HADOOP_PREFIX/etc/hadoop/slaves
+ADD hadoop_config/core-site.xml $HADOOP_PREFIX/etc/hadoop/core-site.xml
+ADD hadoop_config/hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
+ADD hadoop_config/slaves $HADOOP_PREFIX/etc/hadoop/slaves
 #
-ADD config/ssh_config /root/.ssh/config
+ADD hadoop_config/ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
 RUN chown root:root /root/.ssh/config
 #
-ADD config/bootstrap.sh /usr/local/bootstrap.sh
+ADD hadoop_config/bootstrap.sh /usr/local/bootstrap.sh
 RUN chown root:root /usr/local/bootstrap.sh
 RUN chmod 700 /usr/local/bootstrap.sh
 #
