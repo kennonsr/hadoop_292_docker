@@ -6,7 +6,9 @@ Docker for standalone and pseudo-distributed mode
 
 `docker build -t hadoop_285 .`
 
-`docker run -t -i -p 50070:50070 --name=hadoop_285_docker --hostname=master-node hadoop_285`
+`docker run -t -i -d -p 50070:50070 --name=hadoop_285_docker --hostname=master-node hadoop_285`
+
+`docker exec -it hadoop_285_docker /bin/bash`
 
 # Inside of docker container
 
