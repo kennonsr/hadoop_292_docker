@@ -105,6 +105,7 @@ RUN  echo 'PS1="\[$(tput bold)\]\[\033[38;5;193m\]>>>\[$(tput sgr0)\]\[$(tput sg
 
 ENV BOOTSTRAP /usr/local/bootstrap.sh
 RUN service ssh start
+RUN chmod 777 -R /hadoop/data/01/*
 #
 CMD ["/usr/local/bootstrap.sh", "-d"]
 
