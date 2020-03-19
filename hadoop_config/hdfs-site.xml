@@ -8,7 +8,7 @@
         </property>
         <property>
                 <name>dfs.namenode.http-address</name>
-                <value>master:50070</value>
+                <value>master-node:50070</value>
         </property>
         <property>
                 <name>dfs.namenode.secondary.http-address</name>
