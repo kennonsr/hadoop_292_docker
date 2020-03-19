@@ -10,11 +10,11 @@ Docker for standalone and pseudo-distributed mode
 
 # Inside of docker container
 
-`chmod 777 -R /hadoop/data/01/*`
-
 `hdfs namenode -format`
 
-`start-all.sh`
+`start-dfs.sh`
+
+`start-yarn.sh`
 
 `hdfs dfs -mkdir -p /user/root`
 
