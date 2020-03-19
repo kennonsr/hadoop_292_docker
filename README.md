@@ -14,6 +14,8 @@ Docker for standalone and pseudo-distributed mode
 
 `hdfs namenode -format`
 
+`start-all.sh`
+
 `hdfs dfs -mkdir -p /user/root`
 
-`start-all.sh`
+
