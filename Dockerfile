@@ -77,18 +77,18 @@ RUN sed -i '/^export HADOOP_CONF_DIR/ s:.*:export HADOOP_CONF_DIR=/usr/local/had
 
 # PSEUDO DISTRIBUTED MODE CONF
 # # pseudo distributed
-ADD hadoop_config/core-site.xml $HADOOP_PREFIX/etc/hadoop/core-site.xml
-ADD hadoop_config/hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
-ADD hadoop_config/mapred-site.xml $HADOOP_PREFIX/etc/hadoop/mapred-site.xml
-ADD hadoop_config/yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
+ADD hadoop_conf/core-site.xml $HADOOP_PREFIX/etc/hadoop/core-site.xml
+ADD hadoop_conf/hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
+ADD hadoop_conf/mapred-site.xml $HADOOP_PREFIX/etc/hadoop/mapred-site.xml
+ADD hadoop_conf/yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
 
-#ADD hadoop_config/slaves $HADOOP_PREFIX/etc/hadoop/slaves
+#ADD hadoop_conf/slaves $HADOOP_PREFIX/etc/hadoop/slaves
 #
-ADD hadoop_config/ssh_config /root/.ssh/config
+ADD hadoop_conf/ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
 RUN chown root:root /root/.ssh/config
 #
-ADD hadoop_config/bootstrap.sh /usr/local/bootstrap.sh
+ADD hadoop_conf/bootstrap.sh /usr/local/bootstrap.sh
 RUN chown root:root /usr/local/bootstrap.sh
 RUN chmod 700 /usr/local/bootstrap.sh
 #
